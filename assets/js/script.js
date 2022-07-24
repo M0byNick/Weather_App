@@ -1,6 +1,6 @@
 // Variables 
 var searchButton = $("#btn");
-var apiKey = "bc3c243813c52ad74b6ac781570e3c03";
+var apiKey = "de7c069c8afed98b80a96320c6f46e38";
 var searchInput = "";
 var currentWeatherIconEl = $(".weathericon");
 var currentTempEl = $("#todaytemp");
