@@ -1,6 +1,6 @@
 // Variables 
 var searchButton = $("#btn");
-var apiKey = "de7c069c8afed98b80a96320c6f46e38";
+var apiKey = "bc3c243813c52ad74b6ac781570e3c03";
 var searchInput = "";
 var currentWeatherIconEl = $(".weathericon");
 var currentTempEl = $("#todaytemp");
@@ -11,10 +11,10 @@ var currentDate = moment().format("M/D/YYYY");
 var cityName = "";
 var todaycontainer = $("#todaycontainer");
 var dailyDivs = [$('#day-1-div'), $('#day-2-div'), $('#day-3-div'), $('#day-4-div'), $('#day-5-div')];
-/* var hotelbody = $("#hotelbody");
+var hotelbody = $("#hotelbody");
 var hotelImage = $("#hotelImage");
 var hotelName = $("#hotelName");
-var hotelId = ""; */
+var hotelId = "";
 
 var savedCities = JSON.parse(localStorage.getItem('savedCities')) || [];
 
@@ -37,8 +37,8 @@ document.getElementById("formid").addEventListener('submit', function(event){
     searchInput = $(".input").val();
     var weatherContainer = document.getElementById("weather")
     weather.scrollIntoView()
-    /*hotelbody.html("");
-    hotelImage.html("");*/
+    hotelbody.html("");
+    hotelImage.html("");
     
 
     // Storing New Cities into local storage with the old Cities
@@ -46,10 +46,10 @@ document.getElementById("formid").addEventListener('submit', function(event){
     previouslySavedCities.push(searchInput)
     localStorage.setItem("savedCities", JSON.stringify(previouslySavedCities))
 
-    /* getHotels(searchInput);
+    getHotels(searchInput);
     //function for linking hotel images
     //getHotelImages(searchInput);
-    getUserLocation(searchInput);*/
+    getUserLocation(searchInput);
 });
 
 function getSavedCityWeather() {
@@ -177,7 +177,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // Vickiana & Brittany's Code Below
 
-/* var getHotels = function(searchInput) {
+var getHotels = function(searchInput) {
   const options = {
     method: 'GET',
     headers: {
@@ -215,12 +215,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
 // create list item
     .catch(err => console.error(err))
-}*/
+}
 
 //priyam and vickiana trying to link images for hotel 
 
 //get hotel images based on hotelId
-/*var getHotelImages = function (hotelId) {
+var getHotelImages = function (hotelId) {
     const options = {
         method: 'GET',
         headers: {
@@ -245,4 +245,4 @@ document.addEventListener('DOMContentLoaded', () => {
   
         })
         .catch(err => console.error(err));
-    }*/
+    }
